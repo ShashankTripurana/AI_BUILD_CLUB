@@ -1,0 +1,81 @@
+{
+  "Team 2024-2025": [
+    {
+      "name": "G Sree Vatsava",
+      "position": "Founder & President",
+      "image": "static\\images\\G.sree vatsava.jpg"
+    },
+    {
+      "name": "M Sesidhar",
+      "position": "Founder & Secretary",
+      "image": "static\\images\\sesidhar.jpg"
+    }
+  ],
+  "Team 2025-2026": [
+    {
+      "name": "Tripurana Sai Shashank",
+      "position": "President",
+      "image": "static\\images\\Shashank Tripurana.jpg"
+    },
+    {
+      "name": "MUTTA NIHARIKA",
+      "position": "Vice President",
+      "image": "static\\images\\MUTTA NIHARIKA.jpg"
+    },
+    {
+      "name": "Yasaswini Singanapalli",
+      "position": "Secretary",
+      "image": "static\\images\\Yasaswini Singanapalli.jpeg"
+    },
+    {
+      "name": "KONCHADA SHEETAL",
+      "position": "TECH LEAD",
+      "image": "static\\images\\KONCHADA SHEETAL.jpg"
+    },
+    {
+      "name": "REDDY DEVA SREE",
+      "position": "ORGANISING LEAD",
+      "image": "static\\images\\REDDY DEVA SREE.jpg"
+    },
+    {
+      "name": "GEDDI KEERTHI",
+      "position": "AI LEAD",
+      "image": "static\\images\\Geddi Keerthi.jpg"
+    },
+    {
+      "name": "SIMHADRI DIVYA",
+      "position": "WEB LEAD",
+      "image": "static\\images\\Simhadri Divya.jpg"
+    },
+    {
+      "name": "BONAGIRI TEJA SRI",
+      "position": "PUBLIC RELATIONS LEAD",
+      "image": "static\\images\\tejasri bonagiri.jpg"
+    },
+    {
+      "name": "BALLA TRIVENI",
+      "position": "DESIGN LEAD",
+      "image": "static\\images\\BALLA TRIVENI (1).jpg"
+    },
+    {
+      "name": "THANUJA VUGIRI",
+      "position": "PROMOTIONS  LEAD",
+      "image": "static\\images\\Thanuja Vugiri.jpg"
+    },
+    {
+      "name": "RAVADA TARUN",
+      "position": "DOCUMENTATION LEAD",
+      "image": "static\\images\\Tarun Ravada.jpg"
+    },
+    {
+      "name": "PASUPUREDDY SPURTHI",
+      "position": "ALUMNI CELL LEAD",
+      "image": "static\\images\\Spurthi.jpg"
+    },
+    {
+      "name": "DASARI SAITEJA",
+      "position": "ALUMNI CELL LEAD",
+      "image": "static\\images\\Saitej Dasari.jpeg"
+    }
+  ]
+}
