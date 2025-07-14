@@ -21,7 +21,7 @@ html, body {
   background: rgba(0, 0, 0, 0.9);
   padding: 1rem 2rem;
   position: fixed;
-  top: 0;
+  top: 2.2rem; /* below the banner */
   width: 100%;
   z-index: 10;
 }
@@ -54,16 +54,16 @@ html, body {
 main {
   position: relative;
   height: 100vh;
-  padding-top: 4.5rem;
+  padding-top: 6.7rem; /* accounts for both banner + navbar */
 }
 
 /* ░░░ TABS ░░░ */
 .tab-content {
   position: absolute;
-  top: 4.5rem;
+  top: 6.7rem;
   left: 0;
   width: 100%;
-  height: calc(100vh - 4.5rem);
+  height: calc(100vh - 6.7rem);
   display: none;
   overflow-y: auto;
   opacity: 0;
@@ -131,6 +131,7 @@ main {
 .hero p {
   font-size: 1.2rem;
   max-width: 600px;
+  line-height: 1.6;
 }
 
 /* ░░░ GENERIC SECTION ░░░ */
@@ -259,55 +260,14 @@ h2 {
 .social-links i {
   font-size: 24px;
 }
-/* Centering the Social Box */
-#social .section.social {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 4.5rem);
-}
 
-/* Box Styling */
-.social-box {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem 3rem;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-}
-
-/* Social Links Inside the Box */
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.social-links a {
-  color: #00acee;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #ffffff;
-  transform: translateX(5px);
-}
-
-.social-links i {
-  font-size: 1.5rem;
-}
 /* SOCIAL SECTION STYLING */
 #social .section.social {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 4.5rem);
+  height: calc(100vh - 6.7rem);
 }
 
 .social-box {
@@ -365,6 +325,8 @@ h2 {
 .social-links i {
   font-size: 1.5rem;
 }
+
+/* ░░░ SCROLL BANNER ░░░ */
 .scroll-banner {
   width: 100%;
   background: cyan;
@@ -395,12 +357,243 @@ h2 {
   }
 }
 
-/* Update navbar and main content to shift down */
-.navbar {
-  top: 2.2rem; /* below the banner */
+/* ░░░ MOBILE HAMBURGER MENU ░░░ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 11;
 }
 
-main {
-  padding-top: 6.7rem; /* accounts for both banner + navbar */
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
 }
 
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ░░░ MOBILE RESPONSIVE STYLES ░░░ */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .tabs {
+    position: fixed;
+    top: 4.5rem;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 0;
+    transition: left 0.3s ease;
+    z-index: 10;
+  }
+  
+  .tabs.active {
+    left: 0;
+  }
+  
+  .tab-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+  }
+  
+  .tab-btn.active {
+    border-bottom: 2px solid cyan;
+  }
+  
+  /* Hero adjustments */
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  /* Section adjustments */
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  /* Projects grid */
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Team grid */
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .member-card {
+    margin: 0;
+    padding: 0.8rem;
+  }
+  
+  .member-card img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Social box */
+  .social-box {
+    margin: 0 1rem;
+    padding: 1.5rem 2rem;
+    max-width: 350px;
+  }
+  
+  .social-links a {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .social-links i {
+    font-size: 1.3rem;
+  }
+  
+  /* Scroll banner */
+  .scroll-banner {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Main content adjustments */
+  main {
+    padding-top: 6.5rem;
+  }
+  
+  .tab-content {
+    top: 6.5rem;
+    height: calc(100vh - 6.5rem);
+  }
+  
+  /* Blog and wing entries */
+  .blog-post,
+  .wing-category {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+  
+  .section {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  
+  .member-card img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .social-box {
+    padding: 1rem 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .social-links a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .navbar {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+}
+
+/* ░░░ LANDSCAPE PHONE ADJUSTMENTS ░░░ */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    height: 100vh;
+    padding: 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+  
+  .section {
+    padding: 1.5rem 1rem;
+  }
+  
+  #social .section.social {
+    height: calc(100vh - 6.5rem);
+    justify-content: center;
+  }
+  
+  .social-box {
+    max-width: 300px;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* ░░░ TOUCH IMPROVEMENTS ░░░ */
+@media (hover: none) and (pointer: coarse) {
+  .tab-btn:hover,
+  .social-links a:hover {
+    transform: none;
+  }
+  
+  .tab-btn:active {
+    background: rgba(0, 255, 255, 0.2);
+  }
+  
+  .social-links a:active {
+    background-color: cyan;
+    color: #000;
+  }
+}
